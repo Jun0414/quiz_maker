@@ -24,7 +24,7 @@
 }
 
 .check {
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 40px;
 }
 
@@ -39,4 +39,13 @@
     width: 500px;
     height: 200px;
     border: 2px solid black;
+}
+
+.form {
+    flex-direction: row;
+}
+
+.currentTime {
+    flex-direction: column;
+    margin-left: 30px;
 }

@@ -12,6 +12,7 @@
     "react-dom": "^17.0.1",
     "react-player": "^2.6.2",
     "react-scripts": "4.0.0",
+    "react-video-seek-slider": "^2.1.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

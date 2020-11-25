@@ -16,11 +16,11 @@ function App() {
 
   return (
     <div style={appStyle}>
-      <HomeBtn/>
-      <VideoTemplate/>
-      
+      <HomeBtn />
+      <VideoTemplate />
+
     </div>
-    
+
   );
 }
 

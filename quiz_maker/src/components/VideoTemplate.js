@@ -1,10 +1,11 @@
-import React, { useState }from 'react';
+import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import Vi from './VideoTemplate.module.css';
 import VideoTitle from './VideoTitle';
 import PlayTime from './PlayTime';
 
 import CheckboxLabels from './CheckBox';
+import VideoSeeker from './VideoSeeker';
 
 // div를 float으로 설정하는 법 https://ojji.wayful.com/2013/12/HTML-set-Two-Parallel-DIVs-columns.html
 // 투명도 조절 맨뒤 0     background-color: rgba( 255, 255, 255, 0 );
@@ -17,51 +18,59 @@ const playerStyle = {
   flex: 0.5,
 }
 
-const tiStyle = {
-  fleDirection: "row",
+const inputStyle = {
+  width: "30px",
+  height: "20px",
+  paddingRight: "10px",
 }
 
 
 // 'https://www.youtube.com/watch?v=LzmdGtzby2s'
 const VideoTemplate = () => {
-  
+
   const [selectedFile, setSelectedFile] = useState(null)
-  
+
   // 첨부하기 누른 후 취소누르면 에러뜸..
   const onChangeFile = event => {
     const { files } = event.target
     var reader = new FileReader()
 
-    reader.readAsDataURL(files[0]);
-  
+    if (files[0] != null)
+      reader.readAsDataURL(files[0]);
+
     reader.onload = (e) => {
-        setSelectedFile(e.target.result)
+      setSelectedFile(e.target.result)
     }
   }
-  
+
   return (
-    <div style={tiStyle}>
+    <form className={Vi.form}>
       <div className={Vi.video1_template}>
-        <VideoTitle/>
+        <VideoTitle />
         <input className={Vi.input} type="file" name="file" onChange={onChangeFile} />
-        <ReactPlayer style={playerStyle} width={650} height={370} 
-                      url={selectedFile} playing controls/>
+        <ReactPlayer style={playerStyle} width={650} height={370}
+          url={selectedFile} playing controls />
+        <VideoSeeker currentTime="10" />
       </div>
       <div className={Vi.video2_template}>
-        <PlayTime/>
-
-        <div className={Vi.check}>
-          <CheckboxLabels/>
+        <PlayTime />
+        <div className={Vi.currentTime}>
+          시 <input id='hour' type='text' style={inputStyle} />  :
+          분 <input id='minute' type='text' style={inputStyle} />  :
+          초 <input id='second' type='text' style={inputStyle} />
         </div>
 
+        <div className={Vi.check}>
+          <CheckboxLabels />
+        </div>
         <div className={Vi.blank}>
-          <input/>
-        <button variant="primary" type="submit">
-          Submit
+          <input />
+          <button variant="primary" type="submit">
+            Submit
         </button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

@@ -14,11 +14,11 @@ export default function CheckboxLabels() {
   });
 
   const handleChange = (event) => {
-    if ([event.target.name] == "checkedA")
+    if ([event.target.name] === "checkedA")
       setState({ checkedB: false, checkedC: false, [event.target.name]: event.target.checked });
-    else if ([event.target.name] == "checkedB")
+    else if ([event.target.name] === "checkedB")
       setState({ checkedA: false, checkedC: false, [event.target.name]: event.target.checked });
-    else //([event.target.name] == "checkedC")
+    else //([event.target.name] === "checkedC")
       setState({ checkedA: false, checkedB: false, [event.target.name]: event.target.checked });
   };
 
