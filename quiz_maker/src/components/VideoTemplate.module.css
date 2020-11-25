@@ -1,0 +1,42 @@
+.video1_template {
+    flex: 1;
+    height: 555px;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 55px;
+}
+
+.video2_template {
+    flex: 1;
+    height: 555px;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 55px;
+}
+
+.video_title {
+    display: none;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    border: 2px solid black;
+}
+
+.check {
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+.input {
+    margin-top: 30px;
+}
+
+.blank {
+    background: white;
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+}

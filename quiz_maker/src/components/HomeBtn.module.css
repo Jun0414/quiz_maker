@@ -1,0 +1,13 @@
+.title {
+    width: 120px;
+    padding: 5px;
+    display: inline-flex;
+    flex: 0.3;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 100;
+    background: #0d0d0e;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /* 그림자 */ 
+}
