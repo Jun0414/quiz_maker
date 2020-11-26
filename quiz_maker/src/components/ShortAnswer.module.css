@@ -1,0 +1,15 @@
+.quiz {
+    width: 370px;
+    height: 150px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.num {
+    width: 370px;
+    height: 80px;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}

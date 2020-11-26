@@ -24,54 +24,54 @@ export default function CheckboxLabels() {
 
   return (
     <div>
-        <idv>
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ width: 50, height: 30 }}                             // 체크박스 margin같은 역할
-                icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}  // 체크하기 전 체크박스 사이즈
-                checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}       // 체크한 후 체크박스 사이즈
-                checked={state.checkedA}
-                onChange={handleChange}
-                name="checkedA"
-                color="primary"
-              />
-            }
-            label="객관식 문제"
-          />
-        </idv>
-        <div>
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ width: 50, height: 30 }}
-                icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}
-                checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}
-                checked={state.checkedB}
-                onChange={handleChange}
-                name="checkedB"
-                color="primary"
-              />
-            }
-            label="단답형 문제"
-          />
-        </div>
-        <div>
-          <FormControlLabel
-            control={
-              <Checkbox
-                style={{ width: 50, height: 30 }}
-                icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}
-                checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}
-                checked={state.checkedC}
-                onChange={handleChange}
-                name="checkedC"
-                color="primary"
-              />
-            }
-            label="주관식 문제"
-          />
-        </div>
+      <idv>
+        <FormControlLabel
+          control={
+            <Checkbox
+              style={{ width: 50, height: 30 }}                             // 체크박스 margin같은 역할
+              icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}  // 체크하기 전 체크박스 사이즈
+              checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}       // 체크한 후 체크박스 사이즈
+              checked={state.checkedA}
+              onChange={handleChange}
+              name="checkedA"
+              color="primary"
+            />
+          }
+          label="객관식 문제"
+        />
+      </idv>
+      <div>
+        <FormControlLabel
+          control={
+            <Checkbox
+              style={{ width: 50, height: 30 }}
+              icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}
+              checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}
+              checked={state.checkedB}
+              onChange={handleChange}
+              name="checkedB"
+              color="primary"
+            />
+          }
+          label="단답형 문제"
+        />
+      </div>
+      <div>
+        <FormControlLabel
+          control={
+            <Checkbox
+              style={{ width: 50, height: 30 }}
+              icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 50 }} />}
+              checkedIcon={<CheckBoxIcon style={{ fontSize: 50 }} />}
+              checked={state.checkedC}
+              onChange={handleChange}
+              name="checkedC"
+              color="primary"
+            />
+          }
+          label="주관식 문제"
+        />
+      </div>
     </div>
   );
 }

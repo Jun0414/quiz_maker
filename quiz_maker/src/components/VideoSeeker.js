@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { VideoSeekSlider } from 'react-video-seek-slider';
 
 
-const VideoSeeker = ({curTime}) => {
+const VideoSeeker = ({ curTime }) => {
     const [currentTime, setCurrentTime] = useState(10)
 
     return (
@@ -12,7 +12,7 @@ const VideoSeeker = ({curTime}) => {
                 currentTime={curTime}
                 progress={400}
                 onChange={(time) => {
-                    setCurrentTime({time});
+                    setCurrentTime({ time });
                 }}
                 offset={0}
                 secondsPrefix="00:00:"
