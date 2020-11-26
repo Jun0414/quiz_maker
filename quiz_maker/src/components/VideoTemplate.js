@@ -40,30 +40,30 @@ const VideoTemplate = () => {
   return (
     <form className={Vi.form}>
       <div className={Vi.video1_template}>
-        <VideoTitle />
-        <input className={Vi.input_video} type="file" name="file" onChange={onChangeFile} />
+        <VideoTitle/>
+        <input className={Vi.input_video} type="file" name="file" onChange={onChangeFile}/>
         <ReactPlayer style={playerStyle} width={650} height={370}
-          url={selectedFile} playing controls />
-        <VideoSeeker currentTime="10" />
+          url={selectedFile} playing controls/>
+        <VideoSeeker currentTime="10"/>
       </div>
 
       <div className={Vi.video2_template}>
-        <PlayTime />
+        <PlayTime/>
         <div className={Vi.currentTime}>
-          시 <input id='hour' type='text' className={Vi.input_time} />  :
-          분 <input id='minute' type='text' className={Vi.input_time} />  :
-          초 <input id='second' type='text' className={Vi.input_time} />
+          시 <input id='hour' type='text' className={Vi.input_time}/>  :
+          분 <input id='minute' type='text' className={Vi.input_time}/>  :
+          초 <input id='second' type='text' className={Vi.input_time}/>
         </div>
         <div className={Vi.check}>
-          <CheckboxLabels />
+          <CheckboxLabels/>
         </div>
       </div>
 
       <div className={Vi.question}>
         {/* <MultipleChoice/> */}
         {/* <Essay/> */}
-        <ShortAnswer />
-        <input type='submit' className={Vi.submit} />
+        <ShortAnswer/>
+        <input type='submit' className={Vi.submit}/>
       </div>
     </form>
   );
