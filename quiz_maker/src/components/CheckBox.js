@@ -6,7 +6,7 @@ import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 // 체크박스 https://material-ui.com/components/checkboxes/
 
-export default function CheckboxLabels() {
+export default function CheckboxLabels({onChange}) {
   const [state, setState] = React.useState({
     checkedA: true,
     checkedB: false,
@@ -14,17 +14,23 @@ export default function CheckboxLabels() {
   });
 
   const handleChange = (event) => {
-    if ([event.target.name] === "checkedA")
+    if ([event.target.name] == "checkedA"){
       setState({ checkedB: false, checkedC: false, [event.target.name]: event.target.checked });
-    else if ([event.target.name] === "checkedB")
+      onChange(1)
+    }
+    else if ([event.target.name] == "checkedB"){
       setState({ checkedA: false, checkedC: false, [event.target.name]: event.target.checked });
-    else //([event.target.name] === "checkedC")
+      onChange(2)
+    }
+    else { //([event.target.name] == "checkedC")
       setState({ checkedA: false, checkedB: false, [event.target.name]: event.target.checked });
+      onChange(3)
+    }
   };
 
   return (
     <div>
-      <idv>
+      <div>
         <FormControlLabel
           control={
             <Checkbox
@@ -39,7 +45,7 @@ export default function CheckboxLabels() {
           }
           label="객관식 문제"
         />
-      </idv>
+      </div>
       <div>
         <FormControlLabel
           control={

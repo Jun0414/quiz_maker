@@ -5,7 +5,7 @@ import { ViewColumn } from '@material-ui/icons';
 
 function App() {
   const appStyle = {
-    background: "gray",
+    background: "pink",
     border: "3px solid black",
     paddingTop: "20px",
     paddingLeft: "20px",
