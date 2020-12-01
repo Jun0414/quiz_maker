@@ -6,10 +6,9 @@ import PlayTime from './PlayTime';
 
 import CheckboxLabels from './CheckBox';
 import VideoSeeker from './VideoSeeker';
-import MultipleChoice from './MultipleChoice';
-import Essay from './Essay';
-import ShortAnswer from './ShortAnswer';
 import ChooseType from './ChooseType';
+
+import video1 from './video';
 
 // div를 float으로 설정하는 법 https://ojji.wayful.com/2013/12/HTML-set-Two-Parallel-DIVs-columns.html
 // 투명도 조절 맨뒤 0     background-color: rgba( 255, 255, 255, 0 );
@@ -48,17 +47,22 @@ const VideoTemplate = () => {
       <div className={Vi.video1_template}>
         <VideoTitle />
         <input className={Vi.input_video} type="file" name="file" onChange={onChangeFile} />
-        <ReactPlayer style={playerStyle} width={650} height={370}
-          url={selectedFile} playing controls />
+        <ReactPlayer
+          playing
+          controls
+          width='650px'
+          height='370px'
+          style={playerStyle}
+          url={selectedFile} />
         <VideoSeeker currentTime="10" />
       </div>
 
       <div className={Vi.video2_template}>
         <PlayTime />
         <div className={Vi.currentTime}>
-          시 <input id='hour' type='text' className={Vi.input_time} />  :
-          분 <input id='minute' type='text' className={Vi.input_time} />  :
-          초 <input id='second' type='text' className={Vi.input_time} />
+          시 <input id='hour' value='0' type='text' autocomplete="off" className={Vi.input_time} />  :
+          분 <input id='minute' value='0' type='text' autocomplete="off" className={Vi.input_time} />  :
+          초 <input id='second' value='0' type='text' autocomplete="off" className={Vi.input_time} />
         </div>
         <div className={Vi.check}>
           <CheckboxLabels onChange={onChangeCheck} />
@@ -67,9 +71,6 @@ const VideoTemplate = () => {
 
       <div className={Vi.question}>
         <ChooseType type={num} />
-        {/* <MultipleChoice/> */}
-        {/* <Essay/> */}
-        {/* <ShortAnswer/> */}
         <input type='submit' className={Vi.submit} />
       </div>
     </form>

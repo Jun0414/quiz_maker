@@ -12,7 +12,7 @@ const VideoTitle = ({ children }) => {
 
   return (
     <main className={ViT.video_title}>
-      제목 : <input id='title' type='text' style={inputStyle} />
+      제목 : <input id='title' type='text' autocomplete="off" style={inputStyle} />
     </main>
   );
 };
